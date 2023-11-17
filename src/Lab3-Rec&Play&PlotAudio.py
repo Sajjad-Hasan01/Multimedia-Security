@@ -59,9 +59,7 @@ import wave
 import matplotlib.pyplot as plt
 import numpy
 
-file = wave.open(
-    "edited-file.wav", "rb"
-)  # read file , (rb) = read binary ( binary mode )
+file = wave.open("../assets/audio/edited-file.wav", "rb")  # read file , (rb) = read binary ( binary mode )
 sample_freq = file.getframerate()  # Sample frequency
 n_samples = file.getnframes()  # number of samples per time (s)
 signal_wave = file.readframes(-1)  # reading audio signal

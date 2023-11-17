@@ -1,7 +1,7 @@
 import winsound
 import wave
 
-# file_name = "sample-file-4.wav"
+# file_name = "../assets/audio/sample-file-4.wav"
 
 # winsound.PlaySound(file_name, winsound.SND_FILENAME)
 
@@ -18,14 +18,14 @@ import wave
 
 ###    Write On File   ###
 # frames = file.readframes(-1)
-# new_file = wave.open("edited-file2.wav", "wb")    # wb : write mode
+# new_file = wave.open("../assets/audio/edited-file2.wav", "wb")    # wb : write mode
 # new_file.setnchannels(2)
 # new_file.setsampwidth(2)
 # new_file.setframerate(4410)     # 44100 => 4410 being slow...
 # new_file.setnframes(869400)
 # new_file.writeframes(frames)
 #
-# winsound.PlaySound("edited-file2.wav", winsound.SND_FILENAME)
+# winsound.PlaySound("../assets/audio/edited-file2.wav", winsound.SND_FILENAME)
 #
 # new_file.close()
 ###################
@@ -35,11 +35,11 @@ import wave
 
 
 
-file_name = "edited-file.wav"
+file_name = "../assets/audio/edited-file.wav"
 file = wave.open(file_name, "rb")
 frames = file.readframes(-1)
 
-new_file = wave.open("edited-file3.wav", "wb")
+new_file = wave.open("../assets/audio/edited-file3.wav", "wb")
 new_file.setnchannels(2)
 new_file.setsampwidth(2)
 new_file.setframerate(88200)     # 44100 * 2 => 88200 being fast...
@@ -47,7 +47,7 @@ new_file.setnframes(869400)
 new_file.writeframes(frames)
 
 print("edited-file3.wav" + " is playing now...")
-winsound.PlaySound("edited-file3.wav", winsound.SND_FILENAME)
+winsound.PlaySound("../assets/audio/edited-file3.wav", winsound.SND_FILENAME)
 
 new_file.close()
 
@@ -58,7 +58,7 @@ new_file.close()
 
 # ---New File After Edit--- #
 
-# new_file_name = "edited-file.wav"
+# new_file_name = "../assets/audio/edited-file.wav"
 # print(new_file_name + " is playing now...")
 # winsound.PlaySound(new_file_name, winsound.SND_FILENAME)
 #

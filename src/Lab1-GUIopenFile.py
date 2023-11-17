@@ -3,7 +3,7 @@ import tkinter
 
 
 def open_file(event):
-    file_pth = r"doge.jpg"
+    file_pth = r"../assets/image/doge.jpg"
     subprocess.run(['start', file_pth], shell=True)
 
 
