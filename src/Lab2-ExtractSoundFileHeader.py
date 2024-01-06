@@ -18,12 +18,14 @@ def play():
 
 ###    Write On File   ###
 def create():
+    fileName = input("Type path of audio file : ")
     saveas = input("Save as (Type path of new audio with new name and extension) : ")
     channels = input("Channels : ")
     sample_w = input("Sample width : ")
     reate = input("Rate : ")
     nframes = input("Frames number : ")
 
+    file = wave.open(fileName, "rb")    # rb : read mode
     frames = file.readframes(-1)
     new_file = wave.open(saveas, "wb")    # wb : write mode
     new_file.setnchannels(channels)
